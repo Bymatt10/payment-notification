@@ -1,0 +1,29 @@
+spring:
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: matthewreyesvanegas46@gmail.com
+    password: ${MAIL.PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+        transport:
+          protocol: smtp
+  application:
+    name: notification-payments
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/prueba
+    username: root
+    password: 1244$1
+    driver-class-name: com.mysql.cj.jdbc.Driver
+

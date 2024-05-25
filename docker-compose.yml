@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0   # Especifica la imagen de MySQL que deseas usar
+    container_name: mysql_container  # Nombre del contenedor
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1244$1   # Cambia esto por una contraseña segura
+      MYSQL_DATABASE: prueba                # Nombre de usuario
+      MYSQL_PASSWORD: 1244$1        # Contraseña del usuario
+    ports:
+      - "3306:3306"   # Mapea el puerto 3306 del contenedor al puerto 3306 del host
+    volumes:
+      - mysql_data:/var/lib/mysql   # Volumen para persistencia de datos
+
+volumes:
+  mysql_data:
