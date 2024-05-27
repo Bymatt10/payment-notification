@@ -14,5 +14,16 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql   # Volumen para persistencia de datos
 
+  redis:
+    image: redis:latest
+    container_name: redis_container  # Nombre del contenedor Redis
+    environment:
+      REDIS_PASSWORD: 1244$1   # Añade contraseña si está configurada
+    ports:
+      - "16379:6379"   # Mapea el puerto 16379 del host al puerto 6379 del contenedor
+    volumes:
+      - redis_data:/data  # Volumen para persistencia de datos
+
 volumes:
   mysql_data:
+  redis_data:
