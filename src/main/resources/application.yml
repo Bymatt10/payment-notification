@@ -1,10 +1,19 @@
 spring:
+  cache:
+    redis:
+      time-to-live: 36000
+  data:
+    redis:
+      host: localhost
+      port: 16379
+      password: 1244$1
+      timeout: 60000
 
   mail:
     host: smtp.gmail.com
     port: 587
     username: matthewreyesvanegas46@gmail.com
-    password: ${MAIL.PASSWORD}
+    password: 2321
     properties:
       mail:
         smtp:
@@ -14,12 +23,7 @@ spring:
             required: true
         transport:
           protocol: smtp
-    redis:
-      database: 0
-      host: localhost
-      port: 16379
-      password: 1244$1
-      timeout: 60000
+
   application:
     name: notification-payments
 
@@ -33,4 +37,3 @@ spring:
     username: root
     password: 1244$1
     driver-class-name: com.mysql.cj.jdbc.Driver
-

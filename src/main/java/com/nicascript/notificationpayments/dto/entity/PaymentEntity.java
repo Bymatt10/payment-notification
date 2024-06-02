@@ -8,6 +8,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.UUID;
 
@@ -17,7 +18,7 @@ import java.util.UUID;
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Table(name = "payment")
-public class PaymentEntity {
+public class PaymentEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

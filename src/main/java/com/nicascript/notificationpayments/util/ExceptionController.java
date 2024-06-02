@@ -1,6 +1,6 @@
 package com.nicascript.notificationpayments.util;
 
-import com.nicascript.notificationpayments.dto.response.GenericResponseDto;
+import com.nicascript.notificationpayments.dto.GenericResponseDto;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.boot.web.servlet.error.ErrorController;

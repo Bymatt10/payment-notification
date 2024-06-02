@@ -1,6 +1,6 @@
 package com.nicascript.notificationpayments.util;
 
-import com.nicascript.notificationpayments.dto.response.GenericResponseDto;
+import com.nicascript.notificationpayments.dto.GenericResponseDto;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

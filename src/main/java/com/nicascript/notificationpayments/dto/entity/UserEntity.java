@@ -4,13 +4,14 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Table(name = "user")
-public class UserEntity {
+public class UserEntity implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "uuid")
@@ -23,5 +24,5 @@ public class UserEntity {
     private String password;
 
     @Column(name = "status")
-    private Boolean status;
+    private Boolean status = Boolean.TRUE;
 }

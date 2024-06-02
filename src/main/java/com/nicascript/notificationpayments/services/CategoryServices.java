@@ -5,6 +5,7 @@ import com.nicascript.notificationpayments.dto.request.CategoryUpdateDto;
 import com.nicascript.notificationpayments.repository.CategoryRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,7 @@ public class CategoryServices {
         return categoryRepository.save(category);
     }
 
+    @Cacheable(value = "category:find", key = "#uuid")
     public CategoryEntity findByUuid(UUID uuid) {
         var findUuid = categoryRepository.findById(uuid);
         if (findUuid.isPresent()) {
