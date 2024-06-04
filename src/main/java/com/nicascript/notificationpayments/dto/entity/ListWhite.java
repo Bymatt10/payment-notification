@@ -21,4 +21,7 @@ public class ListWhite implements Serializable {
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Column(name = "status")
+    @Enumerated(EnumType.ORDINAL)
+    private Boolean status;
 }
