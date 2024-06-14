@@ -1,4 +1,4 @@
-package com.nicascript.notificationpayments.services;
+package com.nicascript.notificationpayments.services.Impl;
 
 import com.nicascript.notificationpayments.dto.entity.CategoryEntity;
 import com.nicascript.notificationpayments.dto.request.CategoryUpdateDto;
@@ -10,7 +10,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.UUID;
 
 @Service

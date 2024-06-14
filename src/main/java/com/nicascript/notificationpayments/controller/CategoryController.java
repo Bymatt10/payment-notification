@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.nicascript.notificationpayments.dto.entity.CategoryEntity;
 import com.nicascript.notificationpayments.dto.request.CategoryCreateDto;
 import com.nicascript.notificationpayments.dto.request.CategoryUpdateDto;
-import com.nicascript.notificationpayments.services.CategoryServices;
+import com.nicascript.notificationpayments.services.Impl.CategoryServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

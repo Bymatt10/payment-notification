@@ -2,6 +2,7 @@ package com.nicascript.notificationpayments.services;
 
 import com.nicascript.notificationpayments.dto.entity.CategoryEntity;
 import com.nicascript.notificationpayments.repository.CategoryRepository;
+import com.nicascript.notificationpayments.services.Impl.CategoryServices;
 import jakarta.persistence.EntityNotFoundException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,7 +11,6 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Optional;
 import java.util.UUID;
